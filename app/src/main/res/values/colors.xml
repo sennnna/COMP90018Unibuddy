@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="main_color">#93D2F3</color>
+    <color name="line_color">#BBBBBB</color>
+    <color name="login_btn_normal">#93D2F3</color>
+    <color name="login_btn_pressed">#aa93D2F3</color>
 </resources>
