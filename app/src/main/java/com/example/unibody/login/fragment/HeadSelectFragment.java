@@ -21,7 +21,6 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.unibody.R;
-import com.example.unibody.album.data.PhotoDataSingle;
 import com.example.unibody.utils.PermissionUtil;
 
 public class HeadSelectFragment extends Fragment {
@@ -40,19 +39,6 @@ public class HeadSelectFragment extends Fragment {
         head_image = view.findViewById(R.id.head_image);
         name_tv = view.findViewById(R.id.name_tv);
         return view;
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        Uri headImage = PhotoDataSingle.newInstance().getHeadImage();
-        if (headImage != null){
-            Glide
-                    .with(getView()).load(headImage)
-                    .skipMemoryCache(true)//跳过内存缓存
-                    .diskCacheStrategy(DiskCacheStrategy.NONE)//不缓冲disk硬盘中
-                    .into(head_image);
-        }
     }
 
     @Override
