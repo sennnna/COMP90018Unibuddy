@@ -22,7 +22,7 @@
             android:exported="false" />
        <activity
             android:name=".MainActivity"
-            android:exported="faslse"/>
+            android:exported="false"/>
     </application>
 
 </manifest>
