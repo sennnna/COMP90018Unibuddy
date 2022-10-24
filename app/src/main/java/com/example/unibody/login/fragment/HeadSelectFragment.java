@@ -22,6 +22,8 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.unibody.R;
 import com.example.unibody.utils.PermissionUtil;
+import com.example.unibody.album.ui.PhotoAlbumActivity;
+import com.example.unibody.album.viewmodel.PhotoAlbumViewModel;
 
 public class HeadSelectFragment extends Fragment {
 
@@ -48,12 +50,24 @@ public class HeadSelectFragment extends Fragment {
         head_image.setOnClickListener(v -> {
             //检查权限,没有权限则申请权限
             if (PermissionUtil.checkPermissions(PERMISSIONS_STORAGE,requireActivity(),REQUEST_CODE)) {
-//                Intent intent = new Intent(requireActivity(), PhotoAlbumActivity.class);
-//                intent.putExtra("isCheck",false);
-//                startActivity(intent);
+                Intent intent = new Intent(requireActivity(), PhotoAlbumActivity.class);
+                intent.putExtra("isCheck",false);
+                startActivity(intent);
             }
         });
         //get system album,select image is head
+        PhotoAlbumViewModel.getHead_img().observe(requireActivity(), new Observer<Uri>() {
+            @Override
+            public void onChanged(Uri uri) {
+                if (uri != null){
+                    Glide
+                    .with(getView()).load(uri)
+                    .skipMemoryCache(true)//跳过内存缓存
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)//不缓冲disk硬盘中
+                    .into(head_image);
+                }
+            }
+        });
     }
 
     @Override
