@@ -15,6 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.UniBody">
+        <activity android:name="com.yalantis.ucrop.UCropActivity"/>
+
+        <activity
+            android:name=".album.ui.PhotoAlbumActivity"
+            android:exported="false">
+        </activity>
+        
         <activity android:name=".login.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
