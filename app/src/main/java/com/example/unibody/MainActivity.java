@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.unibody.chat.fragment.ChatFragment;
+import com.example.unibody.finder.fragment.FinderCampusFragment;
 import com.example.unibody.finder.fragment.FinderFragment;
 import com.example.unibody.me.fragment.MeFragment;
 import com.example.unibody.share.fragment.ShareFragment;

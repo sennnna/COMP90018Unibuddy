@@ -6,7 +6,9 @@
     <uses-permission android:name="android.permission.CAMERA" /> <!-- 读取系统文件权限 -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +18,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UniBody">
         <activity android:name="com.yalantis.ucrop.UCropActivity"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCZlcb1RrpKcFdee0KSOS3O794RnqfxioA" />
 
         <activity
             android:name=".album.ui.PhotoAlbumActivity"

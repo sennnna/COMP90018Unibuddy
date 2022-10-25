@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#FFBBBBBB">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#EB93D2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz 1:"
+                android:textColor="#6C6C6C"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp"
+                android:background="#FF1684FC"
+                android:padding="1dp">
+
+                <RadioGroup
+                    android:id="@+id/quiz_one_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/quiz_one_eq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Essay Question"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF1684FC"/>
+
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Choice Question" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF1684FC"/>
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Voice Question"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/editext_style"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:hint="Please enter your question"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#FFBBBBBB">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#EB93D2F3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quiz 2:"
+                android:textColor="#6C6C6C"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="3dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="14dp"
+                android:background="#FF1684FC"
+                android:padding="1dp">
+
+                <RadioGroup
+                    android:id="@+id/quiz_two_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/quiz_two_eq"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Essay Question"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF1684FC"/>
+
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Choice Question" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF1684FC"/>
+
+                    <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:background="@color/radio_selector"
+                        android:textColor="@color/radio_text"
+                        android:text="Voice Question"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/editext_style"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:hint="Please enter your question"/>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
