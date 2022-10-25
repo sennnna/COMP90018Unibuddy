@@ -2423,6 +2423,10 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_age
+id tv_desc
+id tv_id
+id tv_name
 id ucrop
 id ucrop_frame
 id ucrop_photobox

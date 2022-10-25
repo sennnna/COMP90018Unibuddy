@@ -100,6 +100,10 @@ id single_card
 id single_image
 id student_nav
 id tips_tv
+id tv_age
+id tv_desc
+id tv_id
+id tv_name
 id unknown_card
 id unknown_image
 id v1

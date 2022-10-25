@@ -21,7 +21,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCZlcb1RrpKcFdee0KSOS3O794RnqfxioA" />
+            android:value="${MAPS_API_KEY}" />
 
         <activity
             android:name=".album.ui.PhotoAlbumActivity"
