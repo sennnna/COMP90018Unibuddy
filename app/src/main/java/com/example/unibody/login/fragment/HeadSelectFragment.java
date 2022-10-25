@@ -62,10 +62,10 @@ public class HeadSelectFragment extends Fragment {
             public void onChanged(Uri uri) {
                 if (uri != null){
                     Glide
-                            .with(getView()).load(uri)
-                            .skipMemoryCache(true)//跳过内存缓存
-                            .diskCacheStrategy(DiskCacheStrategy.NONE)//不缓冲disk硬盘中
-                            .into(head_image);
+                    .with(getView()).load(uri)
+                    .skipMemoryCache(true)//跳过内存缓存
+                    .diskCacheStrategy(DiskCacheStrategy.NONE)//不缓冲disk硬盘中
+                    .into(head_image);
                 }
             }
         });
