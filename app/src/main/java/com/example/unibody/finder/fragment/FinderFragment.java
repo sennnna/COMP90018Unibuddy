@@ -1,5 +1,7 @@
 package com.example.unibody.finder.fragment;
 
+import static java.lang.Float.parseFloat;
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -32,7 +34,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -46,6 +50,12 @@ public class FinderFragment extends Fragment {
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;
     Location UserLocation;
+
+    String[][] users = {{"Yi Cao", "Male", "-37.797114", "144.958450"},
+            {"Zunjie Xu", "Male", "-37.794150", "144.963522"},
+            {"Yuwei Gu", "Female", "-37.796028", "144.967168"},
+            {"Gangdan Shu", "Female", "-37.802353", "144.967247"},
+            {"Meng Yang", "Female", "-37.803272", "144.957023"}};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -167,7 +177,48 @@ public class FinderFragment extends Fragment {
                 MarkerOptions options = new MarkerOptions().position(latLng).title("Me");
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
                 googleMap.addMarker(options);
+                for (int i = 0; i < users.length; i++)
+                {
+                    createMarker(googleMap, users[i]);
+                }
+
+                googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
+                    @Override
+                    public boolean onMarkerClick(@NonNull Marker marker) {
+                        String name = marker.getTitle();
+                        for (int i = 0; i < users.length; i++)
+                        {
+                            if (users[i][0].equals(name))
+                            {
+                                Bundle bundle = new Bundle();
+                                String[] userInfo = users[i];
+                                bundle.putStringArray("user", userInfo);
+                                UserFragment userFragment = new UserFragment();
+                                userFragment.setArguments(bundle);
+                                getFragmentManager().beginTransaction().replace(R.id.fragment, userFragment).commit();
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                });
             }
         });
+    }
+
+    private void createMarker(GoogleMap googleMap, String[] user){
+        float color;
+        if (user[1] == "Male")
+        {
+            color = BitmapDescriptorFactory.HUE_BLUE;
+        }
+        else
+        {
+            color = BitmapDescriptorFactory.HUE_ROSE;
+        }
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(parseFloat(user[2]), parseFloat(user[3])))
+                .title(user[0])
+                .icon(BitmapDescriptorFactory.defaultMarker(color)));
     }
 }

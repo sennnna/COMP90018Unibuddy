@@ -43,7 +43,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCZlcb1RrpKcFdee0KSOS3O794RnqfxioA" />
+            android:value="AIzaSyAoy1kacJt6c167IGXazZpVVcKS2NeS2WA" />
 
         <activity
             android:name="com.example.unibody.album.ui.PhotoAlbumActivity"

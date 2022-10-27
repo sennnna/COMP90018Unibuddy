@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/layout/finder_list_fragment.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/layout/finder_top_navigator.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/layout/fragment_finder.xml" value="0.16742654508611957" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
         <entry key="app/src/main/res/menu/finder_top_navigation.xml" value="0.1" />
       </map>
