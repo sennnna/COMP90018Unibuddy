@@ -32,6 +32,9 @@ public class PersonBasicInfoFragment extends Fragment {
     private int month;
     private int day;
 
+    private String gender = "Male";
+    private String height = "100";
+    
     //当前时间
     private final Calendar CALENDAR = Calendar.getInstance();
 
@@ -89,7 +92,7 @@ public class PersonBasicInfoFragment extends Fragment {
         height_picker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
             @Override
             public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
-
+                height = String.valueOf(newVal);
             }
         });
 
@@ -122,6 +125,7 @@ public class PersonBasicInfoFragment extends Fragment {
             public void onClick(View v) {
                 male_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 female_card.setCardBackgroundColor(getResources().getColor(R.color.black));
+                gender = "Female";
             }
         });
         male_card.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +133,7 @@ public class PersonBasicInfoFragment extends Fragment {
             public void onClick(View v) {
                 female_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 male_card.setCardBackgroundColor(getResources().getColor(R.color.black));
+                gender = "Male";
             }
         });
 
@@ -163,5 +168,16 @@ public class PersonBasicInfoFragment extends Fragment {
         }else {
             day_picker.setMaxValue(30);
         }
+    }
+    public String getGender(){
+        return gender;
+    }
+
+    public String getHeight(){
+        return height;
+    }
+
+    public String getBirth(){
+        return year+"/"+month+"/"+day;
     }
 }
