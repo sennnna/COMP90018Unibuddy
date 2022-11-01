@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.unibody">
     
     <!-- 系统摄像头权限 -->
@@ -16,6 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:theme="@style/Theme.UniBody">
         <activity android:name="com.yalantis.ucrop.UCropActivity"/>
 
@@ -42,6 +44,23 @@
        <activity
             android:name=".MainActivity"
             android:exported="false"/>
+        <activity android:name=".me.fragment.AddMomentActivity" />
+        <activity android:name=".me.fragment.AlbumsActivity" />
+        <activity android:name=".me.fragment.MyFriendsActivity" />
+        <activity android:name=".me.fragment.MyMomentActivity" />
+        <activity android:name=".me.fragment.PhotoActivity" />
+        <activity android:name=".me.fragment.UserInfoActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.unibody.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
     </application>
 
 </manifest>

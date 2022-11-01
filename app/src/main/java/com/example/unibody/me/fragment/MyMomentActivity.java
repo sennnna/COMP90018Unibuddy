@@ -1,30 +1,27 @@
-package com.example.unibody.share.fragment;
+package com.example.unibody.me.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.unibody.R;
-import com.example.unibody.me.fragment.PhotoActivity;
 import com.example.unibody.me.fragment.adapter.MomentsAdapter;
 import com.example.unibody.me.fragment.bean.MomentBean;
 import com.example.unibody.me.fragment.http.ApiBuilder;
 import com.example.unibody.me.fragment.http.ApiClient;
 import com.example.unibody.me.fragment.http.CallBack;
+import com.example.unibody.me.fragment.util.Util;
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONObject;
 
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,18 +29,38 @@ import java.util.List;
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
-public class ShareFragment extends Fragment {
+public class MyMomentActivity extends AppCompatActivity {
 
+    private ImageView back;
+    private ImageView add;
     private RecyclerView rvShare;
     private MomentsAdapter adapter;
     private List<MomentBean.MomentsBean> list = new ArrayList<>();
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.share_fragment, container, false);
-        rvShare = view.findViewById(R.id.rv_share);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_moment);
+        back = findViewById(R.id.btn_back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyMomentActivity.this.finish();
+            }
+        });
+        add = findViewById(R.id.btn_add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyMomentActivity.this, com.example.unibody.me.fragment.AddMomentActivity.class);
+                startActivity(intent);
+                MyMomentActivity.this.finish();
+            }
+        });
+        rvShare = findViewById(R.id.rv_share);
 
-        rvShare.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL, false));
-        adapter = new MomentsAdapter(getActivity(), list, new MomentsAdapter.CallBack() {
+        rvShare.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
+        adapter = new MomentsAdapter(this, list, new MomentsAdapter.CallBack() {
 
             @Override
             public void delMoment(String id) {
@@ -52,18 +69,16 @@ public class ShareFragment extends Fragment {
 
             @Override
             public void showBigPhoto(String path) {
-                Intent intent = new Intent(getActivity(), PhotoActivity.class);
+                Intent intent = new Intent(MyMomentActivity.this, com.example.unibody.me.fragment.PhotoActivity.class);
                 intent.putExtra("path", path);
                 intent.putExtra("canDel", "");
                 startActivity(intent);
             }
         });
         rvShare.setAdapter(adapter);
+
         loadData();
-
-        return view;
     }
-
 
     private void deleteMoment(String id) {
         HashMap<String, String> map = new HashMap<>();
@@ -78,46 +93,43 @@ public class ShareFragment extends Fragment {
             @Override
             public void onResponse(Object data) {
                 Log.e("AAAA", "onResponse: " + data.toString());
-                if (getActivity() != null) {
-                    Toast.makeText(getActivity(), "delete moment success", Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(MyMomentActivity.this, "delete moment success", Toast.LENGTH_SHORT).show();
                 loadData();
             }
 
             @Override
             public void onFail(String msg) {
                 Log.e("AAAA", "onFail: " + msg);
-                if (getActivity() != null) {
-                    Toast.makeText(getActivity(), "delete moment fail", Toast.LENGTH_SHORT).show();
-                }
+                Toast.makeText(MyMomentActivity.this, "delete moment fail", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void loadData() {
         HashMap<String, String> map = new HashMap<>();
+        map.put("username", Util.user);
         JSONObject object = new JSONObject(map);
         String str = object.toString();
         RequestBody body = RequestBody.create(MediaType.parse("application/json;charset=UTF-8"), str);
-        ApiBuilder builder = new ApiBuilder().Url("api/v1/moment").Headers("Content-Type", "application/json").Body(body);
+        ApiBuilder builder = new ApiBuilder().Url("api/v1/moment/getMomentByUsername").Headers("Content-Type", "application/json").Body(body);
 
-        ApiClient.getInstance().doGet(builder, new CallBack<Object>() {
+        ApiClient.getInstance().doPost(builder, new CallBack<Object>() {
             @Override
             public void onResponse(Object data) {
-                List<MomentBean.MomentsBean> moments = new ArrayList<MomentBean.MomentsBean>();
+//                List<MomentBean> moments = new ArrayList<MomentBean>();
+//
+//                Type type = new TypeToken<ArrayList<MomentBean>>() {
+//                }.getType();
 
-                Type type = new TypeToken<ArrayList<MomentBean.MomentsBean>>() {
-                }.getType();
+                MomentBean moments = new Gson().fromJson(data.toString(), MomentBean.class);
 
-                moments = new Gson().fromJson(data.toString(), type);
                 list.clear();
-                list.addAll(moments);
+                list.addAll(moments.getMoments());
                 adapter.notifyDataSetChanged();
 
 
                 Log.e("AAAA", "onResponse: " + data);
             }
-
 
             @Override
             public void onFail(String msg) {
