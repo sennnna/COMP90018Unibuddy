@@ -21,7 +21,7 @@ public class PhotoAlbumViewModel extends AndroidViewModel {
     private static MutableLiveData<Uri> head_img = new MutableLiveData<>();
 
 
-    private static List<Uri> imageList = new ArrayList<>();
+    public static List<Uri> imageList = new ArrayList<>();
 
     public PhotoAlbumViewModel(@NonNull Application application) {
         super(application);
