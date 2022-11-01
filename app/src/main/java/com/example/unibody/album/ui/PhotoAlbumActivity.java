@@ -145,4 +145,4 @@ public class PhotoAlbumActivity extends AppCompatActivity {
         }
     }
 }
-}
+
