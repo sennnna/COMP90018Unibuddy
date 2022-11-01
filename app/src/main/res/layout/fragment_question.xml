@@ -30,68 +30,10 @@
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="3dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="14dp"
-                android:background="#FF1684FC"
-                android:padding="1dp">
 
-                <RadioGroup
-                    android:id="@+id/quiz_one_radio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/quiz_one_eq"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Essay Question"/>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#FF1684FC"/>
-
-
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Choice Question" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#FF1684FC"/>
-
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Voice Question"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
 
             <EditText
+                android:id="@+id/quiz2_edit"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/editext_style"
@@ -132,68 +74,10 @@
                 android:layout_marginLeft="13dp"
                 android:layout_marginTop="3dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="14dp"
-                android:background="#FF1684FC"
-                android:padding="1dp">
 
-                <RadioGroup
-                    android:id="@+id/quiz_two_radio"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/quiz_two_eq"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Essay Question"/>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#FF1684FC"/>
-
-
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Choice Question" />
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="match_parent"
-                        android:background="#FF1684FC"/>
-
-                    <RadioButton
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:button="@null"
-                        android:gravity="center"
-                        android:background="@color/radio_selector"
-                        android:textColor="@color/radio_text"
-                        android:text="Voice Question"/>
-
-                </RadioGroup>
-
-            </LinearLayout>
 
             <EditText
+                android:id="@+id/quiz1_edit"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/editext_style"
