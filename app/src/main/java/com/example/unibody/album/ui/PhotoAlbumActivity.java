@@ -68,12 +68,19 @@ public class PhotoAlbumActivity extends AppCompatActivity {
                         }else {
                             photoAlbumViewModel.removeImage(uris.get(position));
                         }
+                        if (!PhotoAlbumViewModel.imageList.isEmpty()){
+                            send_btn.setEnabled(true);
+                        }
                     }
                 });
             }
         });
 
         close_btn.setOnClickListener(v -> {
+            PhotoAlbumViewModel.imageList.clear();
+            finish();
+        });
+        send_btn.setOnClickListener(v -> {
             finish();
         });
     }
@@ -137,4 +144,5 @@ public class PhotoAlbumActivity extends AppCompatActivity {
             PhotoAlbumActivity.this.finish();
         }
     }
+}
 }
