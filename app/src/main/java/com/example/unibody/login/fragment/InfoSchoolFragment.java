@@ -33,6 +33,7 @@ public class InfoSchoolFragment extends Fragment {
     private NumberPicker school_picker;
     private EditText search_school_edit;
     private TextView tips_tv;
+    private String school = "Harvard University";
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Nullable
@@ -74,6 +75,7 @@ public class InfoSchoolFragment extends Fragment {
                 for (int i = 0; i < strings.size(); i++) {
                     schools[i] = strings.get(i);
                 }
+                school = schools[0];
                 System.out.println(strings.size());
                 System.out.println(schools.length);
                 if (school_picker.getMaxValue() > schools.length - 1){
@@ -83,6 +85,12 @@ public class InfoSchoolFragment extends Fragment {
                     school_picker.setDisplayedValues(schools);
                     school_picker.setMaxValue(schools.length - 1);
                 }
+                school_picker.setOnValueChangedListener(new NumberPicker.OnValueChangeListener() {
+                    @Override
+                    public void onValueChange(NumberPicker picker, int oldVal, int newVal) {
+                        school = schools[newVal];
+                    }
+                });
             }
         });
 
@@ -102,5 +110,8 @@ public class InfoSchoolFragment extends Fragment {
 
             }
         });
+    }
+    public String getSchool() {
+        return school;
     }
 }
