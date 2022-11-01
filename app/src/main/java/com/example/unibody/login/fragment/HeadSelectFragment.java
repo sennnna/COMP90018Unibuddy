@@ -84,12 +84,12 @@ public class HeadSelectFragment extends Fragment {
         }
     }
 
-    public boolean isNameEmpty(){
-        return name_tv.getText().toString().isEmpty();
+   public String getName(){
+        return  name_tv.getText().toString();
     }
 
-    public String getName(){
-        return  name_tv.getText().toString();
+    public Uri getHeadUri(){
+        return PhotoAlbumViewModel.getHead_img().getValue();
     }
 
 
