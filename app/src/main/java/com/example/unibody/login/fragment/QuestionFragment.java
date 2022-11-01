@@ -14,8 +14,9 @@ import com.example.unibody.R;
 public class QuestionFragment extends Fragment {
 
 
-    private RadioGroup quiz_one_radio;
-    private RadioGroup quiz_two_radio;
+   
+    private EditText quiz1_edit;
+    private EditText quiz2_edit;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,10 +28,15 @@ public class QuestionFragment extends Fragment {
     }
 
     private void initView(View view){
-        quiz_one_radio = view.findViewById(R.id.quiz_one_radio);
-        quiz_two_radio = view.findViewById(R.id.quiz_two_radio);
+        quiz1_edit = view.findViewById(R.id.quiz1_edit);
+        quiz2_edit = view.findViewById(R.id.quiz2_edit);
+    }
+    
+    public String quiz1(){
+        return quiz1_edit.getText().toString();
+    }
 
-        quiz_one_radio.check(R.id.quiz_one_eq);
-        quiz_two_radio.check(R.id.quiz_two_eq);
+    public String quiz2(){
+        return quiz2_edit.getText().toString();
     }
 }
