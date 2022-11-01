@@ -16,6 +16,7 @@ import com.example.unibody.R;
 public class InfoStatusFragment extends Fragment {
 
     private CardView dating_card,single_card,unknown_card;
+    private String status = "Dating";
 
     @Nullable
     @Override
@@ -37,6 +38,7 @@ public class InfoStatusFragment extends Fragment {
         dating_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = "Dating";
                 single_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 unknown_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 dating_card.setCardBackgroundColor(getResources().getColor(R.color.black));
@@ -45,6 +47,7 @@ public class InfoStatusFragment extends Fragment {
         single_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = "Single";
                 dating_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 unknown_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 single_card.setCardBackgroundColor(getResources().getColor(R.color.black));
@@ -53,10 +56,14 @@ public class InfoStatusFragment extends Fragment {
         unknown_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = "Unknown";
                 dating_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 single_card.setCardBackgroundColor(getResources().getColor(R.color.white));
                 unknown_card.setCardBackgroundColor(getResources().getColor(R.color.black));
             }
         });
+    }
+    public String getStatus() {
+        return status;
     }
 }
