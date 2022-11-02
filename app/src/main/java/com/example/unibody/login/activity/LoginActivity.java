@@ -35,21 +35,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        /*
-            判断是否已经登录过,返回true则表示已经登录,直接进入MainActivity
-            返回false表示还未登录
-         */
+       
         loadingDialog = new LoadingDialog(LoginActivity.this);
-        loadingDialog.open();
-        SharedPreferences config = getSharedPreferences("config", Context.MODE_PRIVATE);
-        boolean isLogin = config.getBoolean("isLogin", false);
-        if (isLogin){
-            loadingDialog.dismiss();
-            startActivity(new Intent(this,MainActivity.class));
-            return;
-        }
-
-        loadingDialog.dismiss();
 
         loginViewModel = new ViewModelProvider(this,new ViewModelProvider.AndroidViewModelFactory(getApplication())).get(LoginViewModel.class);
         loginViewModel.setLoginViewModel(loginViewModel);
@@ -87,8 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,"Mobile number cannot be empty",Toast.LENGTH_SHORT).show();
                 return;
             }
-            //loginViewModel.sendCode(phoneNumber,LoginActivity.this);
-            startTime();
+            loginViewModel.sendCode(phoneNumber,LoginActivity.this);
         });
     }
 
