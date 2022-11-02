@@ -36,18 +36,20 @@
         
         <activity android:name=".login.activity.LoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
        </activity>
        <activity
             android:name=".login.activity.PersonInfoGuideActivity"
             android:exported="false" />
        <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="true">
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".me.fragment.AddMomentActivity" />
         <activity android:name=".me.fragment.AlbumsActivity" />
         <activity android:name=".me.fragment.MyFriendsActivity" />
