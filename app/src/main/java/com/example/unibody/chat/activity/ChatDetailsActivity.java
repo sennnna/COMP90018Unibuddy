@@ -121,9 +121,9 @@ public class ChatDetailsActivity extends AppCompatActivity {
                         true,
                         1
                 ));
-                chatViewModel.updateLastMsg(index,"[image]",time,1);
-                imageList.clear();
             }
+            chatViewModel.updateLastMsg(index,"[image]",time,1);
+            imageList.clear();
         }
     }
 }
