@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nicholas/AndroidStudioProjects/COMP90018Unibuddy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
+            "outputFile": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "/Users/nicholas/.gradle/caches/transforms-3/955925ba63f06f3d2d0e51d0ac61c5a8/transformed/ucrop-2.2.6/res/values-zh/values-zh.xml",
+                    "source": "/Users/yangmeng/.gradle/caches/transforms-3/955925ba63f06f3d2d0e51d0ac61c5a8/transformed/ucrop-2.2.6/res/values-zh/values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

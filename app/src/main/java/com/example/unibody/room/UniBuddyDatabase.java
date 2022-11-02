@@ -11,6 +11,8 @@ import com.example.unibody.chat.dao.ChatDetailsDao;
 import com.example.unibody.chat.domain.Chat;
 import com.example.unibody.chat.domain.ChatDetails;
 
+
+
 @Database(entities = {Chat.class,ChatDetails.class},version = 1,exportSchema = false)
 public abstract class UniBuddyDatabase extends RoomDatabase {
 

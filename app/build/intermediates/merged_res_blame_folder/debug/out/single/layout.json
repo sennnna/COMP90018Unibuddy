@@ -1,0 +1,178 @@
+[
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/loading_dialog.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/loading_dialog.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_share.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_share.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_chat_details.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_chat_details.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chat_list.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_chat_list.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_albums.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_albums.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_welcome.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_add_moment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_add_moment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/chat_system.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/chat_system.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_list_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_list_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/chat_left_text.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/chat_left_text.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_list_student_list.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_list_student_list.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_info_status.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_info_status.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_info_school.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_info_school.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_campus_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_campus_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_question.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_question.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_person_info_guide.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_person_info_guide.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_nine_grid_photo.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_nine_grid_photo.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_profile_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_profile_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_finder_profile.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_finder_profile.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_chat.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_chat.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_filter_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_filter_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_login.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_photo.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_photo.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_photo_album.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_photo_album.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_photo_.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_photo_.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/chat_right_image.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/chat_right_image.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_moments.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_moments.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/share_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/share_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_my_moment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_my_moment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_me.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_me.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/chat_left_image.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/chat_left_image.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_head_select.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_head_select.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/caht_right_text.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/caht_right_text.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_my_friends.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_my_friends.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_photo.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/item_photo.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_user.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_user.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_finder.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_finder.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_person_basic_info.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/fragment_person_basic_info.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/me_fragment.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/me_fragment.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_top_navigator.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_top_navigator.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_my_friends_activity.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_my_friends_activity.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/finder_campus_list.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/finder_campus_list.xml"
+    },
+    {
+        "merged": "/Users/yangmeng/Desktop/COMP90018/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_user_info.xml",
+        "source": "/Users/yangmeng/Desktop/COMP90018/app/src/main/res/layout/activity_user_info.xml"
+    }
+]

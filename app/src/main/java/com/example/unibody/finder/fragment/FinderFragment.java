@@ -1,7 +1,5 @@
 package com.example.unibody.finder.fragment;
 
-import static java.lang.Float.parseFloat;
-
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -44,23 +42,43 @@ import com.google.android.gms.tasks.Task;
 import com.example.unibody.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FinderFragment extends Fragment {
 
     BottomNavigationView TopNavigationView;
     SupportMapFragment supportMapFragment;
     FusedLocationProviderClient client;
     Location UserLocation;
+    List<Student> students = new ArrayList<>();
 
-    String[][] users = {{"Yi Cao", "Male", "-37.797114", "144.958450"},
-            {"Zunjie Xu", "Male", "-37.794150", "144.963522"},
-            {"Yuwei Gu", "Female", "-37.796028", "144.967168"},
-            {"Gangdan Shu", "Female", "-37.802353", "144.967247"},
-            {"Meng Yang", "Female", "-37.803272", "144.957023"}};
+    String[][] users = {{"Jack", "Male", "-37.797114", "144.958450", "The University of Melbourne", "Single", "300m"},
+            {"John", "Male", "-37.794150", "144.963522", "The University of Melbourne", "Single", "350m"},
+            {"Lucy", "Female", "-37.796028", "144.967168", "The University of Melbourne", "Single", "4800m"},
+            {"Tiffany", "Female", "-37.802353", "144.967247", "The University of Melbourne", "Single", "500m"},
+            {"Katerina", "Female", "-37.803272", "144.957023", "The University of Melbourne", "Single", "800m"}};
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_finder, container, false);
+
+        students.add(new Student("Nick", "IT", "male", "The University of Melbourne", "single", "1.1km", R.mipmap.student1, -37.800512, 144.959430));
+        students.add(new Student("Jack", "Music", "male", "The University of Melbourne", "dating", "1.2km", R.mipmap.student2, -37.799392, 144.963061));
+        students.add(new Student("Tom", "IT", "male", "The University of Melbourne", "dating", "2km", R.mipmap.student3, -37.797783, 144.957777));
+        students.add(new Student("Anna", "Music", "female", "The University of Melbourne", "dating", "2km", R.mipmap.student4, -37.796080, 144.963179));
+        students.add(new Student("Steven", "IT", "male", "The University of Melbourne", "secret", "2.2km", R.mipmap.student5, -37.792022, 144.960375));
+        students.add(new Student("Tina", "Music", "female", "The University of Melbourne", "dating", "3km", R.mipmap.student6, -37.791275, 144.955003));
+        students.add(new Student("Amelia", "Math", "female", "The University of Melbourne", "single", "3km", R.mipmap.student7, -37.791159, 144.967370));
+        students.add(new Student("Hellen", "Math", "female", "The University of Melbourne", "single", "3km", R.mipmap.student8, -37.799042, 144.956656));
+        students.add(new Student("Olive", "IT", "female", "The University of Melbourne", "secret", "3km", R.mipmap.student9, -37.800908, 144.968314));
+        students.add(new Student("Susan", "Engineering", "female", "The University of Melbourne", "dating", "3km", R.mipmap.student10, -37.795730, 144.965717));
+        students.add(new Student("Vivian", "Arts", "female", "Monash University", "dating", "25km", R.mipmap.student11, -37.797114, 144.958450));
+        students.add(new Student("William", "Math", "male", "Monash University", "single", "25km", R.mipmap.student12, -37.794150, 144.963522));
+        students.add(new Student("Cathy", "Music", "female", "Monash University", "secret", "26km", R.mipmap.student13, -37.796028, 144.967168));
+        students.add(new Student("Flower", "Arts", "male", "Monash University", "dating", "27km", R.mipmap.student14, -37.802353, 144.967247));
+        students.add(new Student("Agatha", "Arts", "male", "Monash University", "single", "28km", R.mipmap.student15,  -37.803272, 144.957023));
 
         getActivity().findViewById(R.id.bottom_navigator).setVisibility(View.VISIBLE);
 
@@ -177,25 +195,26 @@ public class FinderFragment extends Fragment {
                 MarkerOptions options = new MarkerOptions().position(latLng).title("Me");
                 googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15));
                 googleMap.addMarker(options);
-                for (int i = 0; i < users.length; i++)
+                for (int i = 0; i < students.size(); i++)
                 {
-                    createMarker(googleMap, users[i]);
+                    //可以切一下输入法吗
+                    if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)
+                        && students.get(i).getStatus().equalsIgnoreCase(Filter.STATUS)){
+                        createMarker(googleMap, students.get(i));
+                    }
                 }
 
                 googleMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(@NonNull Marker marker) {
                         String name = marker.getTitle();
-                        for (int i = 0; i < users.length; i++)
+                        for (int i = 0; i < students.size(); i++)
                         {
-                            if (users[i][0].equals(name))
+                            if (students.get(i).getName().equals(name))
                             {
-                                Bundle bundle = new Bundle();
-                                String[] userInfo = users[i];
-                                bundle.putStringArray("user", userInfo);
-                                UserFragment userFragment = new UserFragment();
-                                userFragment.setArguments(bundle);
-                                getFragmentManager().beginTransaction().replace(R.id.fragment, userFragment).commit();
+                                Intent intent = new Intent(getActivity(), FinderProfileActivity.class);
+                                intent.putExtra("student", students.get(i));
+                                startActivity(intent);
                                 return true;
                             }
                         }
@@ -206,9 +225,9 @@ public class FinderFragment extends Fragment {
         });
     }
 
-    private void createMarker(GoogleMap googleMap, String[] user){
+    private void createMarker(GoogleMap googleMap, Student student){
         float color;
-        if (user[1] == "Male")
+        if (student.getSex() == "male")
         {
             color = BitmapDescriptorFactory.HUE_BLUE;
         }
@@ -217,8 +236,8 @@ public class FinderFragment extends Fragment {
             color = BitmapDescriptorFactory.HUE_ROSE;
         }
         googleMap.addMarker(new MarkerOptions()
-                .position(new LatLng(parseFloat(user[2]), parseFloat(user[3])))
-                .title(user[0])
+                .position(new LatLng(student.getLat(), student.getLon()))
+                .title(student.getName())
                 .icon(BitmapDescriptorFactory.defaultMarker(color)));
     }
 }

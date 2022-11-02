@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="distance">
+        <item>less than 500m</item>
+        <item>less than 1km</item>
+        <item>less than 2km</item>
+        <item>less than 5km</item>
+        <item>less than 10km</item>
+        <item>less than 20km</item>
+        <item>less than 50km</item>
+        <item>more than 50km</item>
+    </string-array>
+</resources>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="university">
+        <item>University of Monash</item>
+        <item>Charles Sturt University</item>
+        <item>Macquarie University</item>
+        <item>Southern Cross University</item>
+        <item>The University of New England</item>
+        <item>The University of Newcastle</item>
+        <item>The University of Sydney</item>
+        <item>University of New South Wales</item>
+        <item>University of Technology Sydney</item>
+        <item>University of Wollongong</item>
+        <item>Western Sydney University</item>
+        <item>AIPE</item>
+        <item>Academy of Information Technology</item>
+        <item>Alphacrucis College</item>
+        <item>Australasian College of Health and Wellness</item>
+        <item>Australian Academy of Music and Performing Arts</item>
+        <item>Australian College of Applied Psychology</item>
+        <item>Australian Film, Television and Radio School</item>
+        <item>Australian Institute of Mgmt Education and Training</item>
+        <item>Australian Institute of Music</item>
+        <item>Avondale College of Higher Education</item>
+        <item>Blue Mountains Intl Hotel Management School</item>
+        <item>Campion College</item>
+        <item>Excelsia College</item>
+        <item>International College of Management, Sydney</item>
+        <item>JMC Academy</item>
+        <item>Kaplan Business School</item>
+        <item>Kaplan Higher Education</item>
+        <item>Kent Institute Australia</item>
+        <item>Macleay College</item>
+        <item>Moore Theological College</item>
+        <item>Morling College</item>
+        <item>Nan Tien Institute</item>
+        <item>National Art School</item>
+        <item>Raffles College of Design and Commerce</item>
+        <item>S P Jain School of Global Management</item>
+        <item>SAE Institute</item>
+        <item>Study Group Australia Pty Ltd</item>
+        <item>Sydney College of Divinity</item>
+        <item>Sydney Institute of Business and Technology</item>
+        <item>Sydney Institute of Traditional Chinese Medicine</item>
+        <item>TAFE NSW</item>
+        <item>Tabor College NSW</item>
+        <item>The Australian College of Physical Education</item>
+        <item>The College of Law</item>
+        <item>The National Institute of Dramatic Art</item>
+        <item>Think: Colleges Pty Ltd</item>
+        <item>Top Education Institute</item>
+        <item>UOW College</item>
+        <item>UTS:INSEARCH</item>
+        <item>Universal Business School Sydney (UBSS)</item>
+        <item>Whitehouse Institute of Design, Australia</item>
+        <item>Deakin University</item>
+        <item>Federation University Australia</item>
+        <item>La Trobe University</item>
+        <item>Monash University</item>
+        <item>RMIT University</item>
+        <item>Swinburne University of Technology</item>
+        <item>The University of Melbourne</item>
+        <item>Victoria University</item>
+        <item>University of Divinity</item>
+        <item>Academy of Design Australia</item>
+        <item>Australian Guild of Music Education Inc.</item>
+        <item>Box Hill Institute</item>
+        <item>Cairnmillar Institute School</item>
+        <item>Chifley Business School</item>
+        <item>Chisholm Institute</item>
+        <item>Collarts</item>
+        <item>Deakin College</item>
+        <item>Eastern College Australia</item>
+        <item>Harvest Bible College</item>
+        <item>Holmes Institute</item>
+        <item>Holmesglen Institute of TAFE</item>
+        <item>Investment Banking Institute Business School</item>
+        <item>John Paul ll Institute for Marriage and Family</item>
+        <item>La Trobe Melbourne</item>
+        <item>Leo Cussen Institute</item>
+        <item>MIECAT</item>
+        <item>Marcus Oldham College</item>
+        <item>Melbourne Institute of Technology</item>
+        <item>Melbourne Polytechnic</item>
+        <item>Monash College</item>
+        <item>Phoenix Institute of Australia Pty Ltd</item>
+        <item>Photography Studies College (Melbourne)</item>
+        <item>Stotts Colleges</item>
+        <item>The Cairnmillar Institute</item>
+        <item>VIT (Victorian Institute of Technology)</item>
+        <item>William Angliss Institute of TAFE</item>
+        <item>CQUniversity</item>
+        <item>Griffith University</item>
+        <item>James Cook University</item>
+        <item>Queensland University of Technology</item>
+        <item>The University of Queensland</item>
+        <item>University of Southern Queensland</item>
+        <item>University of the Sunshine Coast</item>
+        <item>Bond University</item>
+        <item>Australian Institute of Professional Counsellors</item>
+        <item>Christian Heritage College</item>
+        <item>Endeavour College of Natural Health</item>
+        <item>Gestalt Therapy Brisbane</item>
+        <item>Jazz Music Institute</item>
+        <item>Queensland Institute of Business and Technology</item>
+        <item>TAFE Queensland</item>
+        <item>Curtin University of Technology</item>
+        <item>Edith Cowan University</item>
+        <item>Murdoch University</item>
+        <item>The University of Western Australia</item>
+        <item>The University of Notre Dame Australia</item>
+        <item>Australian School of Management</item>
+        <item>Central Institute of Technology</item>
+        <item>Curtin College</item>
+        <item>North Metropolitan TAFE</item>
+        <item>Paramount College of Natural Medicine</item>
+        <item>Perth Bible College</item>
+        <item>Perth Institute of Business and Technology</item>
+        <item>Polytechnic West</item>
+        <item>South Metropolitan TAFE</item>
+        <item>Tabor College Perth</item>
+        <item>West Coast Institute of Training</item>
+        <item>Flinders University</item>
+        <item>The University of Adelaide</item>
+        <item>University of South Australia</item>
+        <item>Torrens University Australia Limited</item>
+        <item>Carnegie Mellon University</item>
+        <item>University College London (UCL)</item>
+        <item>Adelaide Central School of Art</item>
+        <item>Adelaide College of Divinity</item>
+        <item>Australian Institute of Business</item>
+        <item>Australian Institute of Management SA Division Inc</item>
+        <item>Eynesbury</item>
+        <item>International College of Hotel Management</item>
+        <item>Le Cordon Bleu Australia</item>
+        <item>South Aust Institute of Business and Technology</item>
+        <item>TAFE SA</item>
+        <item>Tabor Adelaide</item>
+        <item>Tabor College Tasmania</item>
+        <item>Batchelor Institute of Indigenous Tertiary Education</item>
+        <item>Charles Darwin University</item>
+        <item>The Australian National University</item>
+        <item>University of Canberra</item>
+        <item>Canberra Institute of Technology</item>
+        <item>Australian Catholic University</item>
+        <item>Australian College of Theology</item>
+
+    </string-array>
+</resources>
+

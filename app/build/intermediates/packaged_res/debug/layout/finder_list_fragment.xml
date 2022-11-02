@@ -8,11 +8,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:text="Map View"
+        android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_map_view"
-        android:drawableTint="@color/white"/>
+        android:drawableTint="@color/white"
+        android:text="Map View" />
 
-    <include layout="@layout/finder_top_navigator"/>
 
+    <include layout="@layout/finder_top_navigator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_info"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@+id/map_view"
+        android:layout_below="@+id/finder_top_navigator"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-12dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="0dp"
+        android:scrollbars="vertical"
+        android:visibility="visible">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/filterInfo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginBottom="81dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:text="TextView" />-->
+
+    <include layout="@layout/finder_top_navigator" />
 </RelativeLayout>

@@ -35,6 +35,7 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
@@ -46,11 +47,10 @@
             android:value="AIzaSyAoy1kacJt6c167IGXazZpVVcKS2NeS2WA" />
 
         <activity
-            android:name="com.example.unibody.album.ui.PhotoAlbumActivity"
-            android:exported="false" >
-        </activity>
+            android:name="com.example.unibody.finder.fragment.FinderProfileActivity"
+            android:exported="false" />
         <activity
-            android:name="com.example.unibody.login.activity.LoginActivity"
+            android:name="com.example.unibody.WelcomeActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,12 +59,43 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.example.unibody.chat.activity.ChatDetailsActivity"
+            android:exported="false" />
+        <activity android:name="com.yalantis.ucrop.UCropActivity" />
+        <activity
+            android:name="com.example.unibody.album.ui.PhotoAlbumActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name="com.example.unibody.login.activity.LoginActivity"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name="com.example.unibody.login.activity.PersonInfoGuideActivity"
             android:exported="false" />
         <activity
             android:name="com.example.unibody.MainActivity"
             android:exported="false" />
-        <!-- Needs to be explicitly declared on P+ -->
+        <activity android:name="com.example.unibody.me.fragment.AddMomentActivity" />
+        <activity android:name="com.example.unibody.me.fragment.AlbumsActivity" />
+        <activity android:name="com.example.unibody.me.fragment.MyFriendsActivity" />
+        <activity android:name="com.example.unibody.me.fragment.MyMomentActivity" />
+        <activity android:name="com.example.unibody.me.fragment.PhotoActivity" />
+        <activity android:name="com.example.unibody.me.fragment.UserInfoActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.unibody.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false" /> <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />

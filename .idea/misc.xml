@@ -4,12 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_finder_campus.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/dating1.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/selector.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_finder_profile.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/finder_campus_fragment.xml" value="0.16742654508611957" />
+        <entry key="app/src/main/res/layout/finder_campus_list.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/finder_filter_fragment.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/layout/finder_list_fragment.xml" value="0.16742654508611957" />
+        <entry key="app/src/main/res/layout/finder_list_student_list.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/finder_profile_fragment.xml" value="0.1734375" />
         <entry key="app/src/main/res/layout/finder_top_navigator.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/layout/fragment_finder.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/layout/fragment_user.xml" value="0.1" />

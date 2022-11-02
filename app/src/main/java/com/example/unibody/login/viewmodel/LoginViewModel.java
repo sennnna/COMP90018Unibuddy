@@ -37,7 +37,7 @@ import okhttp3.ResponseBody;
 
 public class LoginViewModel extends AndroidViewModel {
 
-    private final String URL = "http://3.26.21.18/api/v1/";
+    private final String URL = "http://13.211.172.199/api/v1/";
 
     private static LoginViewModel loginViewModel = null;
     private String phoneNumber;

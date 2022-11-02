@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/finder_top_navigation"
-        android:background="?android:attr/windowBackground"
-        app:itemTextColor="@drawable/selector"/>
+        android:background="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector" />
 
 </LinearLayout>

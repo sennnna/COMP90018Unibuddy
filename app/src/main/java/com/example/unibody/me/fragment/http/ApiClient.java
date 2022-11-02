@@ -12,7 +12,7 @@ import retrofit2.Retrofit;
 
 public class ApiClient {
     private static ApiClient instance;
-    private static String BASE_URL = "http://3.26.21.18/";
+    private static String BASE_URL = "http://13.211.172.199/";
 
 
     private final static Retrofit retrofit = new Retrofit.Builder()

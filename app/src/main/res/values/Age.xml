@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Age">
+        <item>15-17</item>
+        <item>18-20</item>
+        <item>20-22</item>
+        <item>23-25</item>
+        <item>26-28</item>
+        <item>29-30</item>
+        <item>31-35</item>
+        <item>36+</item>
+
+    </string-array>
+</resources>
