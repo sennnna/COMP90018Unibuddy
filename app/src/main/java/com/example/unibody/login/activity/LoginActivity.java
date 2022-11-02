@@ -60,11 +60,11 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this,"The verification code cannot be empty",Toast.LENGTH_SHORT).show();
                 return;
             }
-//            startActivity(new Intent(LoginActivity.this,
-//                    PersonInfoGuideActivity.class));
+            startActivity(new Intent(LoginActivity.this,
+                    PersonInfoGuideActivity.class));
 
             //发送请求,判断验证码是否正确
-            loginViewModel.judgeCode(code,phoneNumber,LoginActivity.this);
+            //loginViewModel.judgeCode(code,phoneNumber,LoginActivity.this);
         });
 
         send_code_tv.setOnClickListener(v -> {
