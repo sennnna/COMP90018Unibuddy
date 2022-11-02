@@ -89,53 +89,54 @@ public class PersonInfoGuideActivity extends AppCompatActivity {
                     }
                     changeCenterText();
                 }else {
+                    startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
                     //发送请求,请求成功跳转界面
-                    String path = String.valueOf(personInfo.getHeadUri()).replaceAll("file://", "");
-                    System.out.println(path);
-                    File file = new File(path);
-                    System.out.println(file.getName());
-                    System.out.println(personInfo.getName());
+//                    String path = String.valueOf(personInfo.getHeadUri()).replaceAll("file://", "");
+//                    System.out.println(path);
+//                    File file = new File(path);
+//                    System.out.println(file.getName());
+//                    System.out.println(personInfo.getName());
 
-                    Call call = loginViewModel.uploadPersonInfo(personInfo);
-                    loadingDialog.open();
-                    call.enqueue(new Callback() {
-                        @Override
-                        public void onFailure(@NonNull Call call, @NonNull IOException e) {
-                            loadingDialog.dismiss("Network Timeout");
-                        }
-
-                        @Override
-                        public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                            String result = response.body().string();
-                            JSONObject jsonObject = null;
-                            System.out.println("上传个人信息:"+result);
-                            try {
-                                jsonObject = new JSONObject(result);
-                                JSONObject u = (JSONObject) jsonObject.get("user");
-                                String userID = (String) u.get("userID");
-                                String username = (String) u.get("username");
-                                Call call1 = loginViewModel.uploadHeadImage(file, username);
-                                Response execute = call1.execute();
-
-                                String r = execute.body().string();
-                                jsonObject = new JSONObject(r);
-                                String avatar_url = (String) jsonObject.get("avatar_url");
-
-                                Log.d("上传头像",r);
-                                SharedPreferences.Editor config = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
-                                config.putString("image_head",avatar_url);
-                                config.putBoolean("isLogin",true);
-                                config.commit();
-
-                                startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                Looper.prepare();
-                                loadingDialog.dismiss("Upload failed");
-                                Looper.loop();
-                            }
-                        }
-                    });
+//                    Call call = loginViewModel.uploadPersonInfo(personInfo);
+//                    loadingDialog.open();
+//                    call.enqueue(new Callback() {
+//                        @Override
+//                        public void onFailure(@NonNull Call call, @NonNull IOException e) {
+//                            loadingDialog.dismiss("Network Timeout");
+//                        }
+//
+//                        @Override
+//                        public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+//                            String result = response.body().string();
+//                            JSONObject jsonObject = null;
+//                            System.out.println("上传个人信息:"+result);
+//                            try {
+//                                jsonObject = new JSONObject(result);
+//                                JSONObject u = (JSONObject) jsonObject.get("user");
+//                                String userID = (String) u.get("userID");
+//                                String username = (String) u.get("username");
+//                                Call call1 = loginViewModel.uploadHeadImage(file, username);
+//                                Response execute = call1.execute();
+//
+//                                String r = execute.body().string();
+//                                jsonObject = new JSONObject(r);
+//                                String avatar_url = (String) jsonObject.get("avatar_url");
+//
+//                                Log.d("上传头像",r);
+//                                SharedPreferences.Editor config = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
+//                                config.putString("image_head",avatar_url);
+//                                config.putBoolean("isLogin",true);
+//                                config.commit();
+//
+//                                startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                                Looper.prepare();
+//                                loadingDialog.dismiss("Upload failed");
+//                                Looper.loop();
+//                            }
+//                        }
+//                    });
                 }
             }
         });
