@@ -24,6 +24,17 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="${MAPS_API_KEY}" />
+        
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
         <activity
             android:name=".chat.activity.ChatDetailsActivity"
             android:exported="false" />
@@ -43,13 +54,7 @@
             android:exported="false" />
        <activity
             android:name=".MainActivity"
-            android:exported="true">
-           <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity android:name=".me.fragment.AddMomentActivity" />
         <activity android:name=".me.fragment.AlbumsActivity" />
         <activity android:name=".me.fragment.MyFriendsActivity" />
