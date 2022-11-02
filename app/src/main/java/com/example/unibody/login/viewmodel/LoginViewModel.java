@@ -181,17 +181,24 @@ public class LoginViewModel extends AndroidViewModel {
 
     //发送请求,上传个人信息
     public Call uploadPersonInfo(PersonInfo personInfo){
-        personInfo.setPhoneNumber(phoneNumber);
-        String request = "{\"username\":\""+personInfo.getName()+"\",\"password\":\"\",\"phone_number\":\""+personInfo.getPhoneNumber()
-                +"\",\"gender\":\""+personInfo.getGender()+"\",\"birth\":\""+personInfo.getBirth()+"\",\"email\":\" \",\"status\":\""+
-                personInfo.getStatus()+"\",\"university\":\""+personInfo.getSchool()+"\",\"height\":\""+personInfo.getHeight()+
-                "\",\"sign\":\" \",\"faculty\":\" \",\"major\":\" \",\"quiz\":[\""+personInfo.getQuiz1()+"\",\""+
-                personInfo.getQuiz2()+"\"]}";
-        System.out.println("请求:"+request);
-        RequestBody requestBody = RequestBody.create(
-                request,
-                MediaType.parse("application/json")
-        );
+         personInfo.setPhoneNumber(phoneNumber);
+        Log.d("Gender",personInfo.getGender());
+        RequestBody requestBody = new MultipartBody.Builder().setType(MultipartBody.FORM)
+                .addFormDataPart("username", personInfo.getName())
+                .addFormDataPart("password", "")
+                .addFormDataPart("phone_number", personInfo.getPhoneNumber())
+                .addFormDataPart("email", "")
+                .addFormDataPart("gender", personInfo.getGender())
+                .addFormDataPart("status", personInfo.getStatus())
+                .addFormDataPart("birth", personInfo.getBirth())
+                .addFormDataPart("university", personInfo.getSchool())
+                .addFormDataPart("height", personInfo.getHeight())
+                .addFormDataPart("sign", "")
+                .addFormDataPart("faculty", "")
+                .addFormDataPart("major", "")
+                .addFormDataPart("quiz", personInfo.getQuiz1())
+                .addFormDataPart("quiz", personInfo.getQuiz2())
+                .build();
         return httpUtils.postHttp(URL + "user/register", requestBody);
     }
 
