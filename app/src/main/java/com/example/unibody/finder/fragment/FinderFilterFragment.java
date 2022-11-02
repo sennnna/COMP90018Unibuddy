@@ -48,28 +48,24 @@ public class FinderFilterFragment extends Fragment {
 
             }
         });
-        getActivity().findViewById(R.id.finder_filter_save).setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onClick(View view) {
-                RadioButton genderCheckedBtn = getActivity().findViewById(genderGroup.getCheckedRadioButtonId());
-                RadioButton stateCheckedBtn = getActivity().findViewById(stateGroup.getCheckedRadioButtonId());
-                String genderStr = genderCheckedBtn.getText().toString();
-                String status = stateCheckedBtn.getText().toString();
-                String age = ageSpinner.getSelectedItem().toString();
-                String university = universitySpinner.getSelectedItem().toString();
-                String distance = distanceSpinner.getSelectedItem().toString();
+//        getActivity().findViewById(R.id.finder_filter_save).setOnClickListener(new View.OnClickListener() {
+//            @RequiresApi(api = Build.VERSION_CODES.O)
+//            @Override
+//            public void onClick(View view) {
+//                RadioButton genderCheckedBtn = getActivity().findViewById(genderGroup.getCheckedRadioButtonId());
+//                RadioButton stateCheckedBtn = getActivity().findViewById(stateGroup.getCheckedRadioButtonId());
+//                String genderStr = genderCheckedBtn.getText().toString();
+//                String status = stateCheckedBtn.getText().toString();
+//                String age = ageSpinner.getSelectedItem().toString();
+//                String university = universitySpinner.getSelectedItem().toString();
+//                String distance = distanceSpinner.getSelectedItem().toString();
+//
+//                FinderListFragment finderListFragment = FinderListFragment.newInstance(genderStr,status,age,university,distance);
+//                getFragmentManager().beginTransaction().replace(R.id.fragment, finderListFragment).commit();
+//            }
+//        });
 
-                FinderListFragment finderListFragment = FinderListFragment.newInstance(genderStr,status,age,university,distance);
-                getFragmentManager().beginTransaction().replace(R.id.fragment, finderListFragment).commit();
-            }
-        });
 
-        /**
-         * 这里，我刚刚加的这两个，先不要直接就用Filter。GENDER这类的，你先在这个类里面创建一个变量存储
-         * 因为我刚刚看到了有一个保存按钮
-         * 我给你演示一个
-         */
         genderGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

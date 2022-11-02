@@ -32,9 +32,6 @@ public final class ActivityFinderProfileBinding implements ViewBinding {
   public final TextView finderProfileDistance;
 
   @NonNull
-  public final TextView finderProfileFaculty;
-
-  @NonNull
   public final ImageView finderProfileGender;
 
   @NonNull
@@ -57,16 +54,14 @@ public final class ActivityFinderProfileBinding implements ViewBinding {
 
   private ActivityFinderProfileBinding(@NonNull RelativeLayout rootView,
       @NonNull Button finderProfileAdd, @NonNull ImageButton finderProfileBack,
-      @NonNull TextView finderProfileDistance, @NonNull TextView finderProfileFaculty,
-      @NonNull ImageView finderProfileGender, @NonNull TextView finderProfileMajor,
-      @NonNull TextView finderProfileMotto, @NonNull TextView finderProfileName,
-      @NonNull ImageView finderProfilePhoto, @NonNull TextView finderProfileStatus,
-      @NonNull TextView finderProfileUniversity) {
+      @NonNull TextView finderProfileDistance, @NonNull ImageView finderProfileGender,
+      @NonNull TextView finderProfileMajor, @NonNull TextView finderProfileMotto,
+      @NonNull TextView finderProfileName, @NonNull ImageView finderProfilePhoto,
+      @NonNull TextView finderProfileStatus, @NonNull TextView finderProfileUniversity) {
     this.rootView = rootView;
     this.finderProfileAdd = finderProfileAdd;
     this.finderProfileBack = finderProfileBack;
     this.finderProfileDistance = finderProfileDistance;
-    this.finderProfileFaculty = finderProfileFaculty;
     this.finderProfileGender = finderProfileGender;
     this.finderProfileMajor = finderProfileMajor;
     this.finderProfileMotto = finderProfileMotto;
@@ -121,12 +116,6 @@ public final class ActivityFinderProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.finder_profile_faculty;
-      TextView finderProfileFaculty = ViewBindings.findChildViewById(rootView, id);
-      if (finderProfileFaculty == null) {
-        break missingId;
-      }
-
       id = R.id.finder_profile_gender;
       ImageView finderProfileGender = ViewBindings.findChildViewById(rootView, id);
       if (finderProfileGender == null) {
@@ -170,9 +159,9 @@ public final class ActivityFinderProfileBinding implements ViewBinding {
       }
 
       return new ActivityFinderProfileBinding((RelativeLayout) rootView, finderProfileAdd,
-          finderProfileBack, finderProfileDistance, finderProfileFaculty, finderProfileGender,
-          finderProfileMajor, finderProfileMotto, finderProfileName, finderProfilePhoto,
-          finderProfileStatus, finderProfileUniversity);
+          finderProfileBack, finderProfileDistance, finderProfileGender, finderProfileMajor,
+          finderProfileMotto, finderProfileName, finderProfilePhoto, finderProfileStatus,
+          finderProfileUniversity);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

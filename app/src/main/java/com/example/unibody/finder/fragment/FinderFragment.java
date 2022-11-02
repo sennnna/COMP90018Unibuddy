@@ -74,11 +74,11 @@ public class FinderFragment extends Fragment {
         students.add(new Student("Hellen", "Math", "female", "The University of Melbourne", "single", "3km", R.mipmap.student8, -37.799042, 144.956656));
         students.add(new Student("Olive", "IT", "female", "The University of Melbourne", "secret", "3km", R.mipmap.student9, -37.800908, 144.968314));
         students.add(new Student("Susan", "Engineering", "female", "The University of Melbourne", "dating", "3km", R.mipmap.student10, -37.795730, 144.965717));
-        students.add(new Student("Vivian", "Arts", "female", "Monash University", "dating", "25km", R.mipmap.student11, -37.797114, 144.958450));
-        students.add(new Student("William", "Math", "male", "Monash University", "single", "25km", R.mipmap.student12, -37.794150, 144.963522));
-        students.add(new Student("Cathy", "Music", "female", "Monash University", "secret", "26km", R.mipmap.student13, -37.796028, 144.967168));
-        students.add(new Student("Flower", "Arts", "male", "Monash University", "dating", "27km", R.mipmap.student14, -37.802353, 144.967247));
-        students.add(new Student("Agatha", "Arts", "male", "Monash University", "single", "28km", R.mipmap.student15,  -37.803272, 144.957023));
+        students.add(new Student("Vivian", "Arts", "female", "The University of Melbourne", "dating", "2.5km", R.mipmap.student11, -37.797114, 144.958450));
+        students.add(new Student("William", "Math", "male", "The University of Melbourne", "single", "2.5km", R.mipmap.student12, -37.794150, 144.963522));
+        students.add(new Student("Cathy", "Music", "female", "The University of Melbourne", "secret", "2.6km", R.mipmap.student13, -37.796028, 144.967168));
+        students.add(new Student("Flower", "Arts", "male", "The University of Melbourne", "dating", "2.7km", R.mipmap.student14, -37.802353, 144.967247));
+        students.add(new Student("Agatha", "Arts", "male", "The University of Melbourne", "single", "2.8km", R.mipmap.student15,  -37.803272, 144.957023));
 
         getActivity().findViewById(R.id.bottom_navigator).setVisibility(View.VISIBLE);
 
@@ -197,8 +197,13 @@ public class FinderFragment extends Fragment {
                 googleMap.addMarker(options);
                 for (int i = 0; i < students.size(); i++)
                 {
-                    //可以切一下输入法吗
-                    if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)
+                    if (Filter.GENDER.equals("")&&Filter.STATUS.equals("")){
+                        createMarker(googleMap, students.get(i));
+                    }else if (students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)&&Filter.STATUS.equals("")){
+                    createMarker(googleMap, students.get(i));
+                    }else if (students.get(i).getSex().equalsIgnoreCase(Filter.STATUS)&&Filter.GENDER.equals("")){
+                        createMarker(googleMap, students.get(i));
+                    }else if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)
                         && students.get(i).getStatus().equalsIgnoreCase(Filter.STATUS)){
                         createMarker(googleMap, students.get(i));
                     }

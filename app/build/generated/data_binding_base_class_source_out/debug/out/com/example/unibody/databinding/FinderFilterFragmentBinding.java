@@ -57,9 +57,6 @@ public final class FinderFilterFragmentBinding implements ViewBinding {
   public final RadioButton finderFilterGirlButtonId;
 
   @NonNull
-  public final TextView finderFilterSave;
-
-  @NonNull
   public final RadioButton finderFilterSecretButtonId;
 
   @NonNull
@@ -86,7 +83,7 @@ public final class FinderFilterFragmentBinding implements ViewBinding {
       @NonNull RadioGroup finderFilterChooseStates, @NonNull RadioButton finderFilterDatingButtonId,
       @NonNull TextView finderFilterDistanceList, @NonNull View finderFilterDivider,
       @NonNull TextView finderFilterFilter, @NonNull TextView finderFilterGender,
-      @NonNull RadioButton finderFilterGirlButtonId, @NonNull TextView finderFilterSave,
+      @NonNull RadioButton finderFilterGirlButtonId,
       @NonNull RadioButton finderFilterSecretButtonId,
       @NonNull RadioButton finderFilterSingleButtonId, @NonNull Spinner finderFilterSpinnerAge,
       @NonNull Spinner finderFilterSpinnerDistance, @NonNull Spinner finderFilterSpinnerUniversity,
@@ -103,7 +100,6 @@ public final class FinderFilterFragmentBinding implements ViewBinding {
     this.finderFilterFilter = finderFilterFilter;
     this.finderFilterGender = finderFilterGender;
     this.finderFilterGirlButtonId = finderFilterGirlButtonId;
-    this.finderFilterSave = finderFilterSave;
     this.finderFilterSecretButtonId = finderFilterSecretButtonId;
     this.finderFilterSingleButtonId = finderFilterSingleButtonId;
     this.finderFilterSpinnerAge = finderFilterSpinnerAge;
@@ -206,12 +202,6 @@ public final class FinderFilterFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.finder_filter_save;
-      TextView finderFilterSave = ViewBindings.findChildViewById(rootView, id);
-      if (finderFilterSave == null) {
-        break missingId;
-      }
-
       id = R.id.finder_filter_SecretButtonId;
       RadioButton finderFilterSecretButtonId = ViewBindings.findChildViewById(rootView, id);
       if (finderFilterSecretButtonId == null) {
@@ -258,9 +248,9 @@ public final class FinderFilterFragmentBinding implements ViewBinding {
           finderFilterBack, finderFilterBoyButtonId, finderFilterChooseGender,
           finderFilterChooseStates, finderFilterDatingButtonId, finderFilterDistanceList,
           finderFilterDivider, finderFilterFilter, finderFilterGender, finderFilterGirlButtonId,
-          finderFilterSave, finderFilterSecretButtonId, finderFilterSingleButtonId,
-          finderFilterSpinnerAge, finderFilterSpinnerDistance, finderFilterSpinnerUniversity,
-          finderFilterStatus, finderFilterUniversityList);
+          finderFilterSecretButtonId, finderFilterSingleButtonId, finderFilterSpinnerAge,
+          finderFilterSpinnerDistance, finderFilterSpinnerUniversity, finderFilterStatus,
+          finderFilterUniversityList);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

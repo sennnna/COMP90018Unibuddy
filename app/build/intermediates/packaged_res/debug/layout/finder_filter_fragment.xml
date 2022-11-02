@@ -24,14 +24,14 @@
         android:text="Filter"
         />
 
-    <TextView
-        android:id="@+id/finder_filter_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="17dp"
-        android:text="Save"
-        android:textSize="20dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/finder_filter_save"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="320dp"-->
+<!--        android:layout_marginTop="17dp"-->
+<!--        android:text="Save"-->
+<!--        android:textSize="20dp" />-->
 
     <View
         android:id="@+id/finder_filter_divider"

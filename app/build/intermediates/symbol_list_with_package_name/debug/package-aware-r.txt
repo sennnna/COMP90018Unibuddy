@@ -2205,7 +2205,6 @@ id finder_filter_chooseGender
 id finder_filter_chooseStates
 id finder_filter_distance_list
 id finder_filter_divider
-id finder_filter_save
 id finder_filter_university_list
 id finder_list_content_details
 id finder_list_content_distance

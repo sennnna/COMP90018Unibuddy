@@ -2204,7 +2204,6 @@ int id finder_filter_chooseGender 0x7f0900d6
 int id finder_filter_chooseStates 0x7f0900d7
 int id finder_filter_distance_list 0x7f0900d8
 int id finder_filter_divider 0x7f0900d9
-int id finder_filter_save 0x7f0900da
 int id finder_filter_university_list 0x7f0900db
 int id finder_list_content_details 0x7f0900dc
 int id finder_list_content_distance 0x7f0900dd

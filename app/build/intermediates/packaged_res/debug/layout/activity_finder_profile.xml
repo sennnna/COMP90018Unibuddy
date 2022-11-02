@@ -97,12 +97,7 @@
                 android:paddingBottom="20dp"
                 android:text="university: "
                 android:textStyle="bold"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:text="faculty: "
-                android:textStyle="bold"></TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -128,12 +123,6 @@
                 android:layout_height="wrap_content"
                 android:paddingBottom="20dp"
                 android:text="the University of Melbourne"></TextView>
-            <TextView
-                android:id="@+id/finder_profile_faculty"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp"
-                android:text="Science"></TextView>
             <TextView
                 android:id="@+id/finder_profile_major"
                 android:layout_width="wrap_content"

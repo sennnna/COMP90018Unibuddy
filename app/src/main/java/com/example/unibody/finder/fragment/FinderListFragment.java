@@ -45,6 +45,7 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
     BottomNavigationView TopNavigationView;
     RecyclerView studentList;
     FinderProfileFragment profileFragment;
+    private String gender,status,age,university,distance;
 
     public static FinderListFragment newInstance(String gender, String status, String age, String university, String distance) {
         FinderListFragment finder = new FinderListFragment();
@@ -54,6 +55,7 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
         args.putString("status", status);
         args.putString("university", university);
         args.putString("distance", distance);
+
         finder.setArguments(args);
         return finder;
     }
@@ -79,18 +81,31 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
         students.add(new Student("Hellen", "Math", "female", "The University of Melbourne", "single", "3km", R.mipmap.student8, -37.799042, 144.956656));
         students.add(new Student("Olive", "IT", "female", "The University of Melbourne", "secret", "3km", R.mipmap.student9, -37.800908, 144.968314));
         students.add(new Student("Susan", "Engineering", "female", "The University of Melbourne", "dating", "3km", R.mipmap.student10, -37.795730, 144.965717));
-        students.add(new Student("Vivian", "Arts", "female", "Monash University", "dating", "25km", R.mipmap.student11, -37.797114, 144.958450));
-        students.add(new Student("William", "Math", "male", "Monash University", "single", "25km", R.mipmap.student12, -37.794150, 144.963522));
-        students.add(new Student("Cathy", "Music", "female", "Monash University", "secret", "26km", R.mipmap.student13, -37.796028, 144.967168));
-        students.add(new Student("Flower", "Arts", "male", "Monash University", "dating", "27km", R.mipmap.student14, -37.802353, 144.967247));
-        students.add(new Student("Agatha", "Arts", "male", "Monash University", "single", "28km", R.mipmap.student15,  -37.803272, 144.957023));
+        students.add(new Student("Vivian", "Arts", "female", "The University of Melbourne", "dating", "2.5km", R.mipmap.student11, -37.797114, 144.958450));
+        students.add(new Student("William", "Math", "male", "The University of Melbourne", "single", "2.5km", R.mipmap.student12, -37.794150, 144.963522));
+        students.add(new Student("Cathy", "Music", "female", "The University of Melbourne", "secret", "2.6km", R.mipmap.student13, -37.796028, 144.967168));
+        students.add(new Student("Flower", "Arts", "male", "The University of Melbourne", "dating", "2.7km", R.mipmap.student14, -37.802353, 144.967247));
+        students.add(new Student("Agatha", "Arts", "male", "The University of Melbourne", "single", "2.8km", R.mipmap.student15,  -37.803272, 144.957023));
 
+        List<Student> students_filter = new ArrayList<>();
+        for (int i = 0; i < students.size(); i++)
+        {
+            if (Filter.GENDER.equals("")&&Filter.STATUS.equals("")){
+                students_filter = students;
+            }else if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)&&Filter.STATUS.equals("")){
+                students_filter.add(students.get(i));
+            }else if(students.get(i).getStatus().equalsIgnoreCase(Filter.STATUS)&&Filter.GENDER.equals("")){
+                students_filter.add(students.get(i));
+            }else if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)
+                    && students.get(i).getStatus().equalsIgnoreCase(Filter.STATUS)){
+                students_filter.add(students.get(i));
+            }
+        }
         studentList = view.findViewById(R.id.list_info);
         studentList.setLayoutManager(new LinearLayoutManager(getActivity()));
-        StudentListAdapter studentListAdapter = new StudentListAdapter(getActivity(), students, new StudentListAdapter.OnItemClickListaner() {
+        StudentListAdapter studentListAdapter = new StudentListAdapter(getActivity(), students_filter, new StudentListAdapter.OnItemClickListaner() {
             @Override
             public void onItemCLicked(int position) {
-
                 Intent intent = new Intent(getActivity(), FinderProfileActivity.class);
                 intent.putExtra("student", students.get(position));
                 startActivity(intent);
@@ -99,7 +114,7 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
         });
         studentList.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         studentList.setAdapter(studentListAdapter);
-//            getDataFromServer();
+        getDataFromServer();
         TopNavigationView = view.findViewById(R.id.finder_top_navigator);
         TopNavigationView.setOnNavigationItemSelectedListener(this);
         return view;
@@ -117,16 +132,16 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
     public void getDataFromServer() {
         // 自动生成一批数据
         List<Student> students = new ArrayList<>();
-        String url = "http://3.26.21.18/api/v1/user/getUserByFilter";
+        String url = "http://13.211.172.199/api/v1/user/getUserByFilter";
         JSONObject jsonObject = new JSONObject();
-//        try {
-//            jsonObject.put("gender",gender);
-//            jsonObject.put("status",status);
-//            jsonObject.put("age","");
-//            jsonObject.put("university",university);
-//        }catch (JSONException e){
-//            e.printStackTrace();
-//        }
+        try {
+            jsonObject.put("gender",gender);
+            jsonObject.put("status",status);
+            jsonObject.put("age","");
+            jsonObject.put("university",university);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
         //创建一个OkHttpClient对象
         OkHttpClient okHttpClient = new OkHttpClient();
         MediaType MEDIA_TYPE_TEXT = MediaType.parse("application/json; charset=utf-8");

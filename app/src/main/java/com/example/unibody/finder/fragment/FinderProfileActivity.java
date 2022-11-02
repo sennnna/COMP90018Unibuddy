@@ -39,9 +39,9 @@ public class FinderProfileActivity extends AppCompatActivity {
         binding.finderProfileMajor.setText(student.getMajor());
 
         if ("male".equals(student.getSex())) {
-            binding.finderProfileGender.setImageResource(R.drawable.male);
+            binding.finderProfileGender.setImageResource(R.drawable.man);
         } else {
-            binding.finderProfileGender.setImageResource(R.drawable.female);
+            binding.finderProfileGender.setImageResource(R.drawable.woman);
         }
     }
 }
