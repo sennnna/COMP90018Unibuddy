@@ -114,6 +114,7 @@ public class PersonInfoGuideActivity extends AppCompatActivity {
                                 JSONObject u = (JSONObject) jsonObject.get("user");
                                 String userID = (String) u.get("userID");
                                 String username = (String) u.get("username");
+                                String phoneNumber = (String) u.get("phone_number");
                                 Call call1 = loginViewModel.uploadHeadImage(file, username);
                                 Response execute = call1.execute();
 
@@ -125,6 +126,8 @@ public class PersonInfoGuideActivity extends AppCompatActivity {
                                 SharedPreferences.Editor config = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
                                 config.putString("image_head",avatar_url);
                                 config.putBoolean("isLogin",true);
+                                config.putString("username",username);
+                                config.putString("phone_number",phoneNumber);
                                 config.commit();
 
                                 startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
