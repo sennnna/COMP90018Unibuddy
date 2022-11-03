@@ -17,11 +17,6 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
         SharedPreferences config = getSharedPreferences("config", Context.MODE_PRIVATE);
         boolean isLogin = config.getBoolean("isLogin", false);
-//        if (isLogin){
-//            loadingDialog.dismiss();
-//            startActivity(new Intent(this,MainActivity.class));
-//            return;
-//        }
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -34,12 +29,12 @@ public class WelcomeActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                            if (isLogin){
-                                startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
-                                return;
-                            }else {
+//                             if (isLogin){
+//                                 startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+//                                 return;
+//                             }else {
                                 startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
-                            }
+//                             }
                         }
                     });
                 } catch (InterruptedException e) {
