@@ -108,22 +108,34 @@ public class PersonInfoGuideActivity extends AppCompatActivity {
                         public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                             String result = response.body().string();
                             JSONObject jsonObject = null;
+                            String username = "";
+                            String phoneNumber = "";
                             System.out.println("上传个人信息:"+result);
                             try {
                                 jsonObject = new JSONObject(result);
                                 JSONObject u = (JSONObject) jsonObject.get("user");
                                 String userID = (String) u.get("userID");
-                                String username = (String) u.get("username");
-                                String phoneNumber = (String) u.get("phone_number");
+                                username = (String) u.get("username");
+                                phoneNumber = (String) u.get("phone_number");
+                               
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Looper.prepare();
+                                loadingDialog.dismiss("Upload failed");
+                                Looper.loop();
+                            }
+                            SharedPreferences.Editor config = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
+                            try {
                                 Call call1 = loginViewModel.uploadHeadImage(file, username);
                                 Response execute = call1.execute();
 
                                 String r = execute.body().string();
+
+                                Log.d("上传头像",r);
                                 jsonObject = new JSONObject(r);
                                 String avatar_url = (String) jsonObject.get("avatar_url");
 
-                                Log.d("上传头像",r);
-                                SharedPreferences.Editor config = getSharedPreferences("config", Context.MODE_PRIVATE).edit();
+                               
                                 config.putString("image_head",avatar_url);
                                 config.putBoolean("isLogin",true);
                                 config.putString("username",username);
@@ -131,11 +143,12 @@ public class PersonInfoGuideActivity extends AppCompatActivity {
                                 config.commit();
 
                                 startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                Looper.prepare();
-                                loadingDialog.dismiss("Upload failed");
-                                Looper.loop();
+                            }catch (JSONException e){
+                                config.putBoolean("isLogin",true);
+                                config.putString("username",username);
+                                config.putString("phone_number",phoneNumber);
+                                config.commit();
+                                startActivity(new Intent(PersonInfoGuideActivity.this, MainActivity.class));
                             }
                         }
                     });
