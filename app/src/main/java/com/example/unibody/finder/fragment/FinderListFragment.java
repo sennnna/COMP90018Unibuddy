@@ -92,7 +92,7 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
         for (int i = 0; i < students.size(); i++)
         {
             if (Filter.GENDER.equals("")&&Filter.STATUS.equals("")){
-                students_filter = students;
+                students_filter.add(students.get(i));
             }else if(students.get(i).getSex().equalsIgnoreCase(Filter.GENDER)&&Filter.STATUS.equals("")){
                 students_filter.add(students.get(i));
             }else if(students.get(i).getStatus().equalsIgnoreCase(Filter.STATUS)&&Filter.GENDER.equals("")){
