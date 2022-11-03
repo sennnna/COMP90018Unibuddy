@@ -44,6 +44,8 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
 
     BottomNavigationView TopNavigationView;
     RecyclerView studentList;
+    List<Student> students_filter = new ArrayList<>();
+
     FinderProfileFragment profileFragment;
     private String gender,status,age,university,distance;
 
@@ -87,7 +89,6 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
         students.add(new Student("Flower", "Arts", "male", "The University of Melbourne", "dating", "2.7km", R.mipmap.student14, -37.802353, 144.967247));
         students.add(new Student("Agatha", "Arts", "male", "The University of Melbourne", "single", "2.8km", R.mipmap.student15,  -37.803272, 144.957023));
 
-        List<Student> students_filter = new ArrayList<>();
         for (int i = 0; i < students.size(); i++)
         {
             if (Filter.GENDER.equals("")&&Filter.STATUS.equals("")){
@@ -107,7 +108,7 @@ public class FinderListFragment extends Fragment implements View.OnClickListener
             @Override
             public void onItemCLicked(int position) {
                 Intent intent = new Intent(getActivity(), FinderProfileActivity.class);
-                intent.putExtra("student", students.get(position));
+                intent.putExtra("student", students_filter.get(position));
                 startActivity(intent);
 
             }
