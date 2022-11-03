@@ -98,7 +98,7 @@ public class Util {
         }
         RequestBody requestBody = builder.build();
         Request request = new Request.Builder()
-                .url("http://3.26.21.18/api/v1/moment/addMomentWithImg")
+                .url("http://13.211.172.199/api/v1/moment/addMomentWithImg")
                 .post(requestBody)
                 .build();
 
@@ -138,7 +138,7 @@ public class Util {
         String url = isHeadImg ? "user/upLoadAvatar" : "user/upLoadAlbum";
         RequestBody requestBody = builder.build();
         Request request = new Request.Builder()
-                .url("http://3.26.21.18/api/v1/" + url)
+                .url("http://13.211.172.199/api/v1/" + url)
                 .post(requestBody)
                 .build();
 
