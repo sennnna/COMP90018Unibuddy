@@ -113,9 +113,12 @@ public class LoginViewModel extends AndroidViewModel {
                         JSONObject u = (JSONObject) jsonObject.get("user");
                         //老用户
                         String avatar_url = (String) u.get("avatar_url");
+                        String username = (String) u.get("username");
                         SharedPreferences.Editor config = getApplication().getSharedPreferences("config", Context.MODE_PRIVATE).edit();
                         config.putString("image_head",avatar_url);
                         config.putBoolean("isLogin",true);
+                        config.putString("username",username);
+                        config.putString("phone_number",phoneNumber);
                         config.commit();
                         //跳转到MainActivity
                         loadingDialog.dismiss();
